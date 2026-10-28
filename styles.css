@@ -62,12 +62,16 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px;
+    padding: 110px 50px 50px;
+}
+
+.hero-content {
+    max-width: 800px;
 }
 
 .hero h2 {
@@ -78,6 +82,7 @@ nav ul li a:hover {
 .hero p {
     font-size: 1.2rem;
     margin-top: 10px;
+    line-height: 1.6;
 }
 
 .btn {
@@ -146,6 +151,7 @@ nav ul li a:hover {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: flex-start;
 }
 
 .project-card {
@@ -162,7 +168,9 @@ nav ul li a:hover {
 }
 
 .project-card img {
+    display: block;
     width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
@@ -180,7 +188,69 @@ html {
     scroll-behavior: smooth;
 }
 .timeline-item p {
-    line-height: 1.2;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.timeline-item h3 {
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.project-card-featured {
+    width: 520px;
+    max-width: 100%;
+}
+
+.project-card-featured img {
+    object-fit: contain;
+}
+
+.project-card figcaption {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+.project-card p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.project-card .project-label {
+    color: #a2bffe;
+    font-weight: 600;
+}
+
+.project-card:has(> .project-link) {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.project-card:has(> .project-link) .description {
+    margin-bottom: 16px;
+}
+
+.project-link {
+    display: inline-block;
+    align-self: center;
+    margin-top: auto;
+    padding: 10px 16px;
+    border: 1px solid #a2bffe;
+    border-radius: 5px;
+    color: #a2bffe;
+    text-underline-offset: 3px;
+}
+
+.project-link:hover {
+    background: #a2bffe;
+    color: #020014;
+}
+
+a:focus-visible {
+    outline: 2px solid #a2bffe;
+    outline-offset: 4px;
 }
 .profile-links {
     text-align: center;
@@ -209,7 +279,7 @@ html {
 }
 
 section {
-    scroll-margin-top: 45px;
+    scroll-margin-top: 90px;
 }
 
 footer {
@@ -225,11 +295,16 @@ footer {
       position: relative;
     }
     .hero {
-      padding-top: 20px; /* Less padding needed since header is not fixed */
+      min-height: 70vh;
+      padding: 50px 24px;
+    }
+
+    .timeline, .projects {
+      padding: 40px 24px;
     }
   
     nav ul {
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 10px;
       margin-top: 10px;
     }
@@ -241,6 +316,11 @@ footer {
     .logo {
       font-size: 1.3rem;
       margin-bottom: 10px;
+    }
+
+    .project-card {
+      width: 100%;
+      max-width: 520px;
     }
   }
 
