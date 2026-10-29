@@ -222,13 +222,13 @@ html {
     font-weight: 600;
 }
 
-.project-card:has(> .project-link) {
+.project-card {
     display: flex;
     flex-direction: column;
     align-self: stretch;
 }
 
-.project-card:has(> .project-link) .description {
+.project-card .description {
     margin-bottom: 16px;
 }
 
