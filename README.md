@@ -8,5 +8,3 @@ My personal website showcasing my projects, experience, education, and CV.
 ## Built with
 HTML, CSS, and JavaScript.
 
-## Run locally
-Open `index.html` in your browser.
